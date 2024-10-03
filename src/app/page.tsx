@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 h-screen w-screen items-center justify-center">
+    <div className="flex flex-col gap-8 h-screen w-screen items-center justify-center relative">
       {/* Background video */}
       <video
         className="absolute top-0 left-0 h-full w-full object-cover -z-10"
@@ -14,17 +14,21 @@ export default function Home() {
         muted
       />
 
-      <Image src={"/PLOREX.png"} alt="PLOREX logo" width={400} height={400}/>
+      {/* Semi-transparent black overlay */}
+      <div className="absolute top-0 left-0 h-full w-full bg-black opacity-40 -z-5" />
+
+      <Image src={"/PLOREX.png"} alt="PLOREX logo" width={350} height={350}/>
 
       {/* Main Heading */}
       <Link href="/main">
-        <h1 className="text-outline text-black hover:text-black duration-500  font-semibold text-6xl md:text-9xl font-orbitron z-10">
-        SPACE-X-PLORE
-      </h1>
+        <h1 className="text-outline text-black hover:text-black duration-500 font-semibold text-6xl md:text-9xl font-orbitron z-10">
+          SPACE-X-PLORE
+        </h1>
       </Link>
-        <p className="max-w-[1200px] text-center text-2xl tracking-wider font-semibold text-outline">
-          Explore the Cosmos in 3D – Journey through the Solar System, Asteroids, Satellites, and Constellations. Dive into the mysteries of Near-Earth Objects with interactive models and uncover the wonders of space like never before.
-        </p>
+      <p className="max-w-[1200px] text-center text-white text-2xl tracking-wider font-semibold text-outline">
+        Explore the Cosmos in 3D – Journey through the Solar System, Asteroids, Satellites, and Constellations. Dive into the mysteries of Near-Earth Objects with interactive models and uncover the wonders of space like never before.
+      </p>
+
       {/* Explore Button */}
       <div className="flex items-center justify-center">
         <Link href="/main">
