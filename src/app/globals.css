@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar */
+}
+
+/* Hide scrollbar in IE, Edge */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Orbitron';
+  letter-spacing: 2px;
+}
+
+.grad{
+  background: transparent;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px white;
+}
+
