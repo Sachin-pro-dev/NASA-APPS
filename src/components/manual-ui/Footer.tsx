@@ -11,7 +11,7 @@ const developers: Developer[] = [
     linkedin: "https://www.linkedin.com/in/sachinbaluragi/",
   },
   {
-    name: "Rahul jadvani",
+    name: "Rahul Jadvani",
     linkedin: "https://www.linkedin.com/in/rahul-jadvani-741751208",
   },
   {
@@ -24,7 +24,7 @@ const developers: Developer[] = [
     linkedin: "https://www.linkedin.com/in/ashwini-jadhav-a54869318/",
   },
   {
-    name: "Mohammed yaseen Sutar",
+    name: "Mohammed Yaseen Sutar",
     linkedin:
       "https://www.linkedin.com/in/mohammedyaseen-sutar-6b0a9b195?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
@@ -32,7 +32,7 @@ const developers: Developer[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white h-[79vh] flex justify-between ">
+    <footer className="bg-gray-900 text-white  flex justify-between w-[100%] h-[750px] ">
       {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 "> */}
 
       <iframe

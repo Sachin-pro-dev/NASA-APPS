@@ -241,6 +241,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 // import "./styles.css";
+import Link from "next/link";
 import "../../../components/manual-ui/styles.css";
 
 // Defining the type for a single quiz question
@@ -451,14 +452,16 @@ const Result: React.FC<ResultProps> = ({ score, onRestart }) => {
       >
         Restart Quiz
       </motion.button>
+ <Link href="/spacequiz">
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded transition-colors duration-300"
         onClick={() => window.close()}
-      >
+        >
         Exit Quiz
       </motion.button>
+        </Link>
     </div>
   );
 };

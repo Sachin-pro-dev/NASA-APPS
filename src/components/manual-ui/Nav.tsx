@@ -92,7 +92,7 @@ function Navbar({ className }: { className?: string }) {
      />
     <ProductItem
       title="Cosmic Quiz"
-      href="/quiz"
+      href="/spacequiz"
       src="https://cdn.wallpapersafari.com/18/9/uRQOg4.png"
       description="Challenge yourself with fun quizzes about the cosmos and test your space knowledge!"
     />

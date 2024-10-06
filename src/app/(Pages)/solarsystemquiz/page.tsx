@@ -1,9 +1,10 @@
 // ==========================================
 "use client";
-
+import { useRouter, Router } from "next/router";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "../../../components/manual-ui/styles.css"
+import "../../../components/manual-ui/styles.css";
 // Define types for Quiz Data
 interface QuizItem {
   question: string;
@@ -201,10 +202,12 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
 
 // Result component to display final score and options to restart or exit
 const Result: React.FC<ResultProps> = ({ score, onRestart }) => {
+
   return (
     <div className="text-center">
       <h2 className="text-3xl font-bold mb-4">Quiz Completed!</h2>
       <p className="text-2xl mb-4">Your score: {score} out of 10</p>
+
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
@@ -213,14 +216,20 @@ const Result: React.FC<ResultProps> = ({ score, onRestart }) => {
       >
         Restart Quiz
       </motion.button>
+
+ <Link href="/spacequiz">
+
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded transition-colors duration-300"
-        onClick={() => window.close()}
-      >
+        // onClick={() => router.push("/spacequiz")} // Use router.push for navigation
+        
+        >
         Exit Quiz
       </motion.button>
+        </Link>    
+
     </div>
   );
 };
