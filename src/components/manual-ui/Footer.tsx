@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "@fontsource/orbitron"; 
 
 interface Developer {
   name: string;
@@ -32,7 +33,7 @@ const developers: Developer[] = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white  flex justify-between w-[100%] h-[750px] ">
+    <footer className="bg-gray-900 text-white  flex justify-between w-[100%] h-[750px]  font-orbitron ">
       {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 "> */}
 
       <iframe

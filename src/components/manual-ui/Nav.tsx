@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 export function Nav() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -49,56 +47,69 @@ function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Cosmic Navigator">
           <ProductItem
-      title="Cosmic Navigator"
-      href="/main"
-      src="/image.png"
-      description="A celestial gateway guiding you through the wonders of space, from distant galaxies to near-Earth asteroids."
-    />
+            title="Cosmic Navigator"
+            href="/main"
+            src="/image.png"
+            description="A celestial gateway guiding you through the wonders of space, from distant galaxies to near-Earth asteroids."
+          />
         </MenuItem>
         <Link href={"/"}>
-          <Image src={"/PLOREX.png"} alt="PLOREX logo" width={30} height={40}/>
+          <Image src={"/PLOREX.png"} alt="PLOREX logo" width={30} height={40} />
         </Link>
         <MenuItem setActive={setActive} active={active} item="X-plore">
-  <div className="text-sm grid grid-cols-3 gap-6 p-2">
-    <ProductItem
-      title="Solar System"
-      href="/solarsystem"
-      src="https://c4.wallpaperflare.com/wallpaper/486/410/394/5bd3321100531-wallpaper-preview.jpg"
-      description="Explore detailed 3D models of the solar system's planets and moons."
-    />
-    <ProductItem
-      title="Constellations"
-      href="/constellations"
-      src="https://wallpapers.com/images/hd/4k-ultra-hd-galaxy-star-constellation-xeesy5birtn1pv0u.jpg"
-      description="Discover the night sky and learn about various constellations visible from Earth."
-    />
-    <ProductItem
-      title="Constellations Info"
-      href="/constellationsinfo"
-      src="https://c4.wallpaperflare.com/wallpaper/80/655/797/space-wallpaper-preview.jpg"
-      description="Get detailed information about constellations, their history, and mythology."
-    />
-    <ProductItem
-      title="Asteroids"
-      href="/asteroids"
-      src="https://wallpapercave.com/wp/wp2682938.jpg"
-      description="Learn about the asteroids in our solar system and their potential impact on Earth."
-    />
-    <ProductItem
-      title="Satellites"
-      href="/satellites"
-      src="https://images7.alphacoders.com/807/thumb-1920-807182.jpg"
-      description="Explore the groundbreaking satellites that enhance our understanding of Earth and the universe."
-     />
-    <ProductItem
-      title="Cosmic Quiz"
-      href="/spacequiz"
-      src="https://cdn.wallpapersafari.com/18/9/uRQOg4.png"
-      description="Challenge yourself with fun quizzes about the cosmos and test your space knowledge!"
-    />
-  </div>
-</MenuItem>
+          <div className="text-sm grid grid-cols-4 gap-6 p-2">
+            <ProductItem
+              title="Solar System"
+              href="/solarsystem"
+              src="https://c4.wallpaperflare.com/wallpaper/486/410/394/5bd3321100531-wallpaper-preview.jpg"
+              description="Explore detailed 3D models of the solar system's planets and moons."
+            />
+            <ProductItem
+              title="Constellations"
+              href="/constellations"
+              src="https://wallpapers.com/images/hd/4k-ultra-hd-galaxy-star-constellation-xeesy5birtn1pv0u.jpg"
+              description="Discover the night sky and learn about various constellations visible from Earth."
+            />
+            <ProductItem
+              title="Constellations Info"
+              href="/constellationsinfo"
+              src="https://c4.wallpaperflare.com/wallpaper/80/655/797/space-wallpaper-preview.jpg"
+              description="Get detailed information about constellations, their history, and mythology."
+            />
+            <ProductItem
+              title="Asteroids"
+              href="/asteroids"
+              src="https://wallpapercave.com/wp/wp2682938.jpg"
+              description="Learn about the asteroids in our solar system and their potential impact on Earth."
+            />
+            <ProductItem
+              title="Satellites"
+              href="/satellites"
+              src="https://images7.alphacoders.com/807/thumb-1920-807182.jpg"
+              description="Explore the groundbreaking satellites that enhance our understanding of Earth and the universe."
+            />
+            <ProductItem
+              title="Galatic Quiz"
+              href="/spacequiz"
+              src="https://cdn.wallpapersafari.com/18/9/uRQOg4.png"
+              description="Challenge yourself with fun quizzes about the cosmos and test your space knowledge!"
+            />
+            <ProductItem
+              title="Space News"
+              href="/spacenews"
+              src="https://cdn.wallpapersafari.com/18/9/uRQOg4.png"
+              description="Get the latest in space exploration and astronomy—breaking news, mission updates, and discoveries that shape our universe.
 
+"
+            />
+            <ProductItem
+              title="Space Game"
+              href="/spacegame"
+              src="https://i.guim.co.uk/img/media/426b87fffb556dfe713da2a8da27806f1c222f72/0_187_4000_2400/master/4000.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=83eaf13d8afc1fe85ab9a5fc07a1a68a"
+              description="Embark on a cosmic journey! Navigate your spaceship, complete missions, and discover treasures in this exciting space game. Are you ready?"
+            />
+          </div>
+        </MenuItem>
       </Menu>
     </div>
   );
